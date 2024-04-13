@@ -16,8 +16,8 @@ body {
   height: 100vh;
   margin: auto;
   display: flex;
-  align-items: center;
-  background: url(./assets/img/bg.png) var(--dark-color);  
+  align-items: center; 
+  background: url(/assets/img/bg.png) var(--dark-color);  
   background-size: 50% 50%;
   
 }
