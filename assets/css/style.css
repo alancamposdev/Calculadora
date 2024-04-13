@@ -17,12 +17,12 @@ body {
   margin: auto;
   display: flex;
   align-items: center;
-  background: url(/assets/img/bg.png) var(--dark-color);  
+  background: url(./assets/img/bg.png) var(--dark-color);  
   background-size: 50% 50%;
   
 }
 
-.calculadora {
+.calculator {
   margin: 0 auto;
   min-width: 370px;
   width: 530px;
@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
   padding: 1rem;
 }
-.tela {
+#display {
   width: 100%;
   height: 20%;
   margin: 3rem auto 1rem;
@@ -48,7 +48,7 @@ body {
   outline: none;
 }
 
-.teclado {
+.buttons {
   width: 100%;
   height: 60%;
   border: 1px solid transparent;
@@ -56,13 +56,13 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.teclado :first-child {
+.buttons :first-child {
   margin-left: 0.3rem;
 }
-.teclado :last-child {
+.buttons :last-child {
   padding-right: 0;
 }
-.btn {
+.buttons button {
   margin: 3px auto;
   flex: 0 0 auto;
   width: 23%;
@@ -76,28 +76,30 @@ body {
   cursor: pointer;
 }
 
-.btn-clear {
+.buttons button:nth-child(2) {
   background-color: var(--light-color);
   color: var(--dark-color);
 }
 
-.btn-acao {
+ /* seleciona o ultimo botão do teclado  */
+.buttons button:last-child {
   background-color: var(--secondary-color);
   color: var(--light-color);
 }
-.teclado .btn-zero {
+
+.buttons button:nth-child(17) {
   width: 47.3%;
   text-align: left;
   padding-left: 3.3rem;
 }
 
-.footer {
+.calculator .footer {
   text-align: center;
   padding: 1rem;
   color: var(--light-color);
 }
 
-.footer .line {
+.calculator .footer .line {
   display: block;
   height: 6px;
   width: 30%;
@@ -106,7 +108,7 @@ body {
   border-radius: 6px;
 }
 @media (max-width: 600px) {
-  .calculadora {
+  .calculator {
     margin: 1rem;
   }
 }

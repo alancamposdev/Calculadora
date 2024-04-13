@@ -1,62 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-   <title>Calculadora</title>
-   <meta charset="UTF-8">
-   <meta name="author" content="Alan Campos">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="assets/css/style.css">
-   <script src="assets/js/script.js" defer></script>
-</head>
-
-<body>
-
-   <main class="calculadora">
-      <!--tela-->
-      <input class="tela" type="text" readonly />
-
-      <!--teclado-->
-      <div class="teclado">
-
-         <button class=" btn btn-clear ms-0" onclick="calcular('acao', 'c')">c</button>
-         <button class=" btn btn-clear" onclick="calcular('acao', 'c')">+/</button>
-         <button class=" btn btn-clear" onclick="calcular('acao', 'c')">%</button>
-         <button class=" btn btn-acao" onclick="calcular('acao', '/')">&#247;</button>
-
-
-         <button class=" btn" onclick="calcular('num', 7)">7</button>
-         <button class=" btn" onclick="calcular('num', 8)">8</button>
-         <button class=" btn" onclick="calcular('num', 9)">9</button>
-         <button class=" btn btn-acao" onclick="calcular('acao', '*')">x</button>
-
-
-         <button class=" btn" onclick="calcular('num', 4)">4</button>
-         <button class=" btn" onclick="calcular('num', 5)">5</button>
-         <button class=" btn" onclick="calcular('num', 6)">6</button>
-         <button class=" btn btn-acao" onclick="calcular('acao', '-')">-</button>
-
-
-         <button class=" btn" onclick="calcular('num', 1)">1</button>
-         <button class=" btn" onclick="calcular('num', 2)">2</button>
-         <button class=" btn" onclick="calcular('num', 3)">3</button>
-         <button class=" btn btn-acao" onclick="calcular('acao','+')">+</button>
-
-
-         <button class=" btn btn-zero" onclick="calcular('num', 0)">0</button>
-         <button class=" btn " onclick="calcular('acao', '.')">.</button>
-         <button class=" btn btn-acao" onclick="calcular('acao','=')">=</button>
-
+<html lang="en">
+  <head>
+    <title>Calculadora Simples</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Alan Campos" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="calculator">
+      <input type="text" id="display" />
+      <div class="buttons">
+        <button onclick="off()">OFF</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculatePercentage()('%')">%</button>
+        <button onclick="insert('/')">÷</button>
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="insert('*')">*</button>
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('-')">-</button>
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('+')">+</button>
+        <button onclick="insert('0')">0</button>
+        <button onclick="insert('.')">.</button>
+        <button onclick="calculate()">=</button>
       </div>
-      <!-- rodapé-->
       <footer class="footer">
-         <div class="line"></div>
-         <div>
-            <small>Desenvolvido por: Alan Campos</small>
-         </div>
+        <div class="line"></div>
+        <div>
+          <small>Desenvolvido por: Alan Campos</small>
+        </div>
       </footer>
-   </main>
-
-</body>
+    </main>
+  </body>
 </html>

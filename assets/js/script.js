@@ -1,21 +1,25 @@
-function calcular(tipo, num, acao) {
-  let tela = document.querySelector(".tela");
-  if (tipo == "num") {
-      tela.value += num;
-  }
+let display = document.querySelector("#display");
 
-  if (tipo == "acao") {
-    if (num == "c") {
-      tela.value = " ";
-    }
-    if (num == "+" || num == "-" || num == "*" || num == "/" || num == ".") {
-      num = tela.value += num;
-      document.querySelector("tela").value = num;
-    }
-    if (num == "=") {
-      resultado = eval(tela.value);
-      tela.value = resultado;
-    }
+function insert(value) {
+  if (display.value === "0") {
+    display.value = "";
+  }
+  display.value += value;
+}
+function clearDisplay() {
+  display.value = "0";
+}
+function off() {
+  display.value = "";
+}
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch (e) {
+    display.value = "Error";
   }
 }
-calcular();
+
+function calculatePercentage() {
+  display.value = eval(display.value) / 100;
+}
